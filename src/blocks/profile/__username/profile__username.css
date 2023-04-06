@@ -1,0 +1,22 @@
+.profile__username {
+    margin: 0;
+    padding: 0;
+    max-width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__username {
+        max-width: 282px;
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        align-self: center;
+    }
+}

@@ -1,0 +1,12 @@
+.authorization__status-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000;
+}
+.authorization__status-text:last-child {
+  margin-bottom: 20px;
+}
