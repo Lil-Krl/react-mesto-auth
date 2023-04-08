@@ -1,6 +1,6 @@
 class AuthorizationApi {
-  constructor(authUrl) {
-    this._authUrl = authUrl
+  constructor(authorizationUrl) {
+    this._authorizationUrl = authorizationUrl
   }
   _processingServerResponse(res) {
     if (res.ok) {
@@ -11,7 +11,7 @@ class AuthorizationApi {
   }
 
   tokenVerification(token) {
-    return fetch(`${this._authUrl}users/me`, {
+    return fetch(`${this._authorizationUrl}users/me`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -20,7 +20,7 @@ class AuthorizationApi {
   }
 
   userAuthorization(password, email) {
-    return fetch(`${this._authUrl}signin`, {
+    return fetch(`${this._authorizationUrl}signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ class AuthorizationApi {
   }
 
   userRegistration(password, email) {
-    return fetch(`${this._authUrl}signup`, {
+    return fetch(`${this._authorizationUrl}signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
