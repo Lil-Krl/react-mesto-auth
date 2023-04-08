@@ -11,7 +11,7 @@
     letter-spacing: 0em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 644px) {
     .profile__username {
         max-width: 282px;
         font-size: 27px;

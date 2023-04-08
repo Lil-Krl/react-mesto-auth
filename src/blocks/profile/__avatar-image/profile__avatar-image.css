@@ -10,7 +10,7 @@
     opacity: .2;
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 644px) {
     .profile__avatar-image {
         margin: 0 0 20px;
     }

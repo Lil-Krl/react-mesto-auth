@@ -1,9 +1,41 @@
+import { Link, Route } from "react-router-dom"
 import headerImage from "../images/Mesto.svg"
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
-      <img src={headerImage} className="header__image" alt="Логотип Место" />
+      <img
+        src={headerImage}
+        className="header__logo"
+        alt="Логотип проекта Mesto"
+      />
+      <div className="header__member-area">
+        {props.isLoggedIn ? (
+          <>
+            <p className="header__menu-item">{props.email}</p>
+            <Link
+              to="/sign-in"
+              className="header__menu-item"
+              onClick={props.isLogout}
+            >
+              Выйти
+            </Link>
+          </>
+        ) : (
+          <>
+            <Route path="/sign-up">
+              <Link to="/sign-in" className="header__menu-item">
+                Вход
+              </Link>
+            </Route>
+            <Route path="/sign-in">
+              <Link to="/sign-up" className="header__menu-item">
+                Регистрация
+              </Link>
+            </Route>
+          </>
+        )}
+      </div>
     </header>
   )
 }

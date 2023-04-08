@@ -9,7 +9,7 @@ function PopupEditProfile(props) {
   useEffect(() => {
     setName(userItem.name)
     setDescription(userItem.about)
-  }, [props.isOpen])
+  }, [props.isOpen, userItem.about, userItem.name])
   function handleSubmit(event) {
     event.preventDefault()
     props.onUpdateUser({ name: name, about: description })
